@@ -1,0 +1,24 @@
+# --- Core data handling + EDA (Notebook 0) ---
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.12
+
+# --- Ontology / knowledge graph (Notebook 1) ---
+# owlready2 uses the HermiT reasoner, which needs Java (JRE 8+) on PATH.
+# If Java is absent the notebook still runs (owlrl materialises the RDFS closure in pure Python).
+owlready2>=0.46
+rdflib>=7.0
+owlrl>=6.0
+
+# --- Graph neural networks (Notebooks 3, 4, 5) ---
+# IMPORTANT: torch_geometric often needs wheels matched to your torch + CUDA build.
+# If `pip install torch-geometric` fails, install torch first, then follow:
+#   https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+torch>=2.0
+torch-geometric>=2.4
+
+# --- Notebook execution (used by run_all.py) ---
+jupyter
+nbconvert>=7.0
+ipykernel
