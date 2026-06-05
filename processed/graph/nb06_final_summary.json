@@ -1,0 +1,25 @@
+{
+  "DETECTION (headline)": {
+    "task": "anomaly detection (reconstruction error)",
+    "metric": "taux = event-window detection rate",
+    "best_model": "GCN",
+    "taux": 0.0,
+    "events_detected": "0/3",
+    "ROC_AUC": 0.5564,
+    "FPR_normal": 0.0016,
+    "per_event_recall": {
+      "fire": 0.0,
+      "dust_humidity": 0.0,
+      "power_outage": 0.0
+    }
+  },
+  "PREDICTION (comparison)": {
+    "task": "pollutant concentration regression (leakage-clean)",
+    "metric": "R2 / MAE / RMSE (real units)",
+    "best_GNN": "SAT-Graph",
+    "best_GNN_R2": -0.1024,
+    "best_sequential": "RNN",
+    "best_seq_R2": 0.0192,
+    "note": "PM excludes particle counts (no same-sensor leakage)"
+  }
+}

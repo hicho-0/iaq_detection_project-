@@ -1,0 +1,153 @@
+{
+  "n_windows": 4258,
+  "n_nodes": 30,
+  "n_edges": 57,
+  "node_order": [
+    "TypPS",
+    "oxygen",
+    "pm10",
+    "cnt0_5",
+    "co",
+    "temperature",
+    "performance",
+    "co2",
+    "measuretime",
+    "so2",
+    "no2",
+    "cnt5",
+    "pm1",
+    "cnt1",
+    "dewpt",
+    "tvoc",
+    "pressure",
+    "cnt10",
+    "dCO2dt",
+    "sound_max",
+    "health",
+    "temperature_o2",
+    "cnt2_5",
+    "o3",
+    "humidity",
+    "dHdt",
+    "humidity_abs",
+    "sound",
+    "pm2_5",
+    "cnt0_3"
+  ],
+  "feature_channels": [
+    "mean",
+    "std",
+    "min",
+    "max",
+    "last",
+    "slope",
+    "range",
+    "state_sev"
+  ],
+  "relation_vocab": {
+    "affects": 0,
+    "associatedWith": 1,
+    "correlatedWith": 2,
+    "indicates": 3,
+    "influences": 4,
+    "reflects": 5
+  },
+  "event_id_map": {
+    "normal": 0,
+    "fire": 1,
+    "dust_humidity": 2,
+    "power_outage": 3
+  },
+  "window": {
+    "size": 30,
+    "stride": 15,
+    "max_gap_frac": 0.2
+  },
+  "detection": {
+    "train_normal_only": true,
+    "sizes": {
+      "train": 2886,
+      "val": 618,
+      "test": 754
+    },
+    "test_event_windows": 134
+  },
+  "prediction": {
+    "targets": [
+      "co2",
+      "so2",
+      "no2",
+      "co",
+      "o3",
+      "tvoc",
+      "pm2_5",
+      "pm10",
+      "pm1"
+    ],
+    "context_inputs": [
+      "temperature",
+      "temperature_o2",
+      "humidity",
+      "humidity_abs",
+      "dewpt",
+      "pressure",
+      "oxygen",
+      "sound",
+      "sound_max",
+      "dHdt"
+    ],
+    "excluded": [
+      "TypPS",
+      "cnt0_5",
+      "performance",
+      "measuretime",
+      "cnt5",
+      "cnt1",
+      "cnt10",
+      "dCO2dt",
+      "health",
+      "cnt2_5",
+      "cnt0_3"
+    ],
+    "target_node_idx": [
+      7,
+      9,
+      10,
+      4,
+      23,
+      15,
+      28,
+      2,
+      12
+    ],
+    "context_node_idx": [
+      5,
+      21,
+      24,
+      26,
+      14,
+      16,
+      1,
+      27,
+      19,
+      25
+    ],
+    "sizes": {
+      "train": 2886,
+      "val": 618,
+      "test": 620
+    },
+    "targets_in_real_units": true
+  },
+  "leakage_controls": [
+    "edges are ontology relations, not future-correlation (no look-ahead)",
+    "particle counts + TypPS excluded from prediction inputs (same sensor as PM mass)",
+    "dCO2dt, health, performance excluded from prediction inputs",
+    "splits are per-deployment and temporal; events held out; apartment not dumped into train",
+    "scaler fit on training windows only"
+  ],
+  "per_deployment_windows": {
+    "laboratory": 3426,
+    "apartment": 832
+  }
+}

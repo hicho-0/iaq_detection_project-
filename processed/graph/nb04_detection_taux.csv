@@ -1,0 +1,4 @@
+Model,threshold,FPR_normal,fire_recall,dust_humidity_recall,power_outage_recall,events_detected,taux_window
+GCN,440.06318,0.0016,0.0,0.0,0.0,0/3,0.0
+GIN,452.71502,0.0016,0.0,0.0,0.0,0/3,0.0
+SAT-Graph,970.22582,0.0016,0.0,0.0,0.0,0/3,0.0

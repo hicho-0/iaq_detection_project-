@@ -1,0 +1,6 @@
+{
+  "gnn_mean_R2": -0.10239999999999999,
+  "seq_mean_R2": 0.01923333333333334,
+  "best_gnn": "SAT-Graph",
+  "best_seq": "RNN"
+}

@@ -1,0 +1,13 @@
+{
+  "best_detection_model": "GCN",
+  "roc_auc": 0.5564,
+  "pr_auc": 0.276,
+  "taux_window_detection_rate": 0.0,
+  "events_detected": "0/3",
+  "fpr_normal": 0.0016,
+  "per_event_recall": {
+    "fire": 0.0,
+    "dust_humidity": 0.0,
+    "power_outage": 0.0
+  }
+}

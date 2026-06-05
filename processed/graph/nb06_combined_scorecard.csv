@@ -1,0 +1,10 @@
+family,model,headline_metric,value,secondary
+detection,GCN,taux,0.0,FPR=0.0016
+detection,GIN,taux,0.0,FPR=0.0016
+detection,SAT-Graph,taux,0.0,FPR=0.0016
+prediction,GCN,R2_avg,-0.035,RMSE=114.2558
+prediction,GIN,R2_avg,-0.2928,RMSE=122.2405
+prediction,SAT-Graph,R2_avg,0.0206,RMSE=111.9848
+prediction,RNN,R2_avg,0.1776,RMSE=87.2545
+prediction,LSTM,R2_avg,-0.2007,RMSE=114.1943
+prediction,GRU,R2_avg,0.0808,RMSE=80.0929

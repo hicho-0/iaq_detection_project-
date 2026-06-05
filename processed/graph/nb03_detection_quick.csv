@@ -1,0 +1,4 @@
+Model,ROC_AUC,PR_AUC,threshold,FPR_normal,fire_recall,dust_humidity_recall,power_outage_recall
+GCN,0.5564,0.276,440.06318,0.0016,0.0,0.0,0.0
+GIN,0.5247,0.2593,452.71502,0.0016,0.0,0.0,0.0
+SAT-Graph,0.3174,0.1335,970.22589,0.0016,0.0,0.0,0.0

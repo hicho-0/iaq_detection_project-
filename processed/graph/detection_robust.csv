@@ -1,0 +1,25 @@
+model,threshold,fpr_normal,recall,precision,f1,events_detected,recall_fire,recall_dust_humidity,recall_power_outage,label,strategy,threshold_desc
+GCN,1.90255,0.0226,0.0896,0.4615,0.15,3/3,0.04,0.04,0.2353,base_p90,baseline_percentile,p90 raw val
+GCN,6.25452,0.0129,0.0448,0.4286,0.0811,1/3,0.0,0.0,0.1765,base_p95,baseline_percentile,p95 raw val
+GCN,440.06318,0.0016,0.0,0.0,0.0,0/3,0.0,0.0,0.0,base_p99,baseline_percentile,p99 raw val
+GCN,0.66698,0.1258,0.3209,0.3554,0.3373,3/3,0.36,0.26,0.3529,MAD_k3,robust_MAD,med+3*MAD
+GCN,0.82771,0.0855,0.291,0.4239,0.3451,3/3,0.34,0.24,0.2941,MAD_k4,robust_MAD,med+4*MAD
+GCN,0.98844,0.0726,0.2612,0.4375,0.3271,3/3,0.28,0.22,0.2941,MAD_k5,robust_MAD,med+5*MAD
+GCN,5.18409,0.0145,0.0448,0.4,0.0805,1/3,0.0,0.0,0.1765,trim_p95,trimmed_percentile,trim-p95 (drop top 1%)
+GCN,23.06787,0.0097,0.0,0.0,0.0,0/3,0.0,0.0,0.0,trim_p97_5,trimmed_percentile,trim-p97.5 (drop top 1%)
+GIN,1.12074,0.0274,0.0821,0.3929,0.1358,3/3,0.02,0.04,0.2353,base_p90,baseline_percentile,p90 raw val
+GIN,5.55039,0.0129,0.0448,0.4286,0.0811,1/3,0.0,0.0,0.1765,base_p95,baseline_percentile,p95 raw val
+GIN,452.71502,0.0016,0.0,0.0,0.0,0/3,0.0,0.0,0.0,base_p99,baseline_percentile,p99 raw val
+GIN,0.27692,0.1774,0.3806,0.3168,0.3458,3/3,0.42,0.32,0.4118,MAD_k3,robust_MAD,med+3*MAD
+GIN,0.34344,0.1226,0.291,0.3391,0.3133,3/3,0.36,0.18,0.3529,MAD_k4,robust_MAD,med+4*MAD
+GIN,0.40997,0.1032,0.2687,0.36,0.3077,3/3,0.36,0.14,0.3235,MAD_k5,robust_MAD,med+5*MAD
+GIN,4.49031,0.0145,0.0448,0.4,0.0805,1/3,0.0,0.0,0.1765,trim_p95,trimmed_percentile,trim-p95 (drop top 1%)
+GIN,27.06028,0.0097,0.0,0.0,0.0,0/3,0.0,0.0,0.0,trim_p97_5,trimmed_percentile,trim-p97.5 (drop top 1%)
+SAT-Graph,1.7768,0.0758,0.0597,0.1455,0.0847,1/3,0.0,0.0,0.2353,base_p90,baseline_percentile,p90 raw val
+SAT-Graph,32.07033,0.0129,0.0,0.0,0.0,0/3,0.0,0.0,0.0,base_p95,baseline_percentile,p95 raw val
+SAT-Graph,970.22589,0.0016,0.0,0.0,0.0,0/3,0.0,0.0,0.0,base_p99,baseline_percentile,p99 raw val
+SAT-Graph,0.3967,0.5774,0.2239,0.0773,0.1149,3/3,0.32,0.04,0.3529,MAD_k3,robust_MAD,med+3*MAD
+SAT-Graph,0.49638,0.5258,0.194,0.0739,0.107,3/3,0.26,0.02,0.3529,MAD_k4,robust_MAD,med+4*MAD
+SAT-Graph,0.59606,0.4774,0.1716,0.0721,0.1015,3/3,0.22,0.02,0.3235,MAD_k5,robust_MAD,med+5*MAD
+SAT-Graph,19.96176,0.0129,0.0075,0.1111,0.014,1/3,0.0,0.0,0.0294,trim_p95,trimmed_percentile,trim-p95 (drop top 1%)
+SAT-Graph,79.25401,0.0081,0.0,0.0,0.0,0/3,0.0,0.0,0.0,trim_p97_5,trimmed_percentile,trim-p97.5 (drop top 1%)
