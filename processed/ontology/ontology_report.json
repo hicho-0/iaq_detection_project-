@@ -1,0 +1,23 @@
+{
+  "variables_modeled": 30,
+  "properties_covered": "31/31 (30 measured variables + timestamp as TimeContext)",
+  "classes": 53,
+  "object_properties": 15,
+  "data_properties": 8,
+  "individuals": 7983,
+  "variable_edges": 34,
+  "directed_edges_for_gnn": 57,
+  "class_restrictions": 17,
+  "connected_components": 1,
+  "rdf_triples": 93146,
+  "inferred_triples_rdfs": 53413,
+  "reasoner": "skipped (FileNotFoundError)",
+  "consistent": null,
+  "adopted_ontologies": [
+    "SOSA",
+    "SSN",
+    "QUDT",
+    "OWL-Time"
+  ],
+  "observable_properties_qudt_mapped": "26/30"
+}
