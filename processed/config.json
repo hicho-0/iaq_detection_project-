@@ -1,0 +1,581 @@
+{
+  "variables": [
+    "TypPS",
+    "oxygen",
+    "pm10",
+    "cnt0_5",
+    "co",
+    "temperature",
+    "performance",
+    "co2",
+    "measuretime",
+    "so2",
+    "no2",
+    "cnt5",
+    "pm1",
+    "cnt1",
+    "dewpt",
+    "tvoc",
+    "pressure",
+    "cnt10",
+    "dCO2dt",
+    "sound_max",
+    "health",
+    "temperature_o2",
+    "cnt2_5",
+    "o3",
+    "humidity",
+    "dHdt",
+    "humidity_abs",
+    "sound",
+    "pm2_5",
+    "cnt0_3"
+  ],
+  "category": {
+    "co": "Pollutant",
+    "co2": "Pollutant",
+    "no2": "Pollutant",
+    "so2": "Pollutant",
+    "o3": "Pollutant",
+    "tvoc": "Pollutant",
+    "pm1": "ParticleMatter",
+    "pm2_5": "ParticleMatter",
+    "pm10": "ParticleMatter",
+    "TypPS": "ParticleMatter",
+    "cnt0_3": "ParticleCount",
+    "cnt0_5": "ParticleCount",
+    "cnt1": "ParticleCount",
+    "cnt2_5": "ParticleCount",
+    "cnt5": "ParticleCount",
+    "cnt10": "ParticleCount",
+    "temperature": "EnvironmentalCondition",
+    "temperature_o2": "EnvironmentalCondition",
+    "humidity": "EnvironmentalCondition",
+    "humidity_abs": "EnvironmentalCondition",
+    "dewpt": "EnvironmentalCondition",
+    "pressure": "EnvironmentalCondition",
+    "oxygen": "EnvironmentalCondition",
+    "dCO2dt": "DynamicCondition",
+    "dHdt": "DynamicCondition",
+    "sound": "AcousticCondition",
+    "sound_max": "AcousticCondition",
+    "health": "AssessmentMetric",
+    "performance": "AssessmentMetric",
+    "measuretime": "MeasurementProperty"
+  },
+  "ontology_class": {
+    "co": "CarbonMonoxide",
+    "co2": "CarbonDioxide",
+    "no2": "NitrogenDioxide",
+    "so2": "SulfurDioxide",
+    "o3": "Ozone",
+    "tvoc": "VOC",
+    "oxygen": "OxygenLevel",
+    "pm1": "PM1",
+    "pm2_5": "PM2_5",
+    "pm10": "PM10",
+    "TypPS": "AverageParticleSize",
+    "cnt0_3": "ParticleCount0_3",
+    "cnt0_5": "ParticleCount0_5",
+    "cnt1": "ParticleCount1",
+    "cnt2_5": "ParticleCount2_5",
+    "cnt5": "ParticleCount5",
+    "cnt10": "ParticleCount10",
+    "temperature": "Temperature",
+    "temperature_o2": "OxygenTemperature",
+    "humidity": "RelativeHumidity",
+    "humidity_abs": "AbsoluteHumidity",
+    "dewpt": "DewPoint",
+    "pressure": "AtmosphericPressure",
+    "dCO2dt": "CO2ChangeRate",
+    "dHdt": "HumidityChangeRate",
+    "sound": "NoiseLevel",
+    "sound_max": "MaximumNoiseLevel",
+    "health": "HealthIndex",
+    "performance": "PerformanceIndex",
+    "measuretime": "MeasurementCycle"
+  },
+  "units": {
+    "TypPS": "um",
+    "oxygen": "%vol",
+    "pm10": "ug/m3",
+    "cnt0_5": "count",
+    "co": "ppm",
+    "temperature": "C",
+    "performance": "score",
+    "co2": "ppm",
+    "measuretime": "ms",
+    "so2": "ug/m3",
+    "no2": "ug/m3",
+    "cnt5": "count",
+    "pm1": "ug/m3",
+    "cnt1": "count",
+    "dewpt": "C",
+    "tvoc": "ppb",
+    "pressure": "hPa",
+    "cnt10": "count",
+    "dCO2dt": "ppm/s",
+    "sound_max": "dB(A)",
+    "health": "index",
+    "temperature_o2": "C",
+    "cnt2_5": "count",
+    "o3": "ug/m3",
+    "humidity": "%",
+    "dHdt": "g/m3/s",
+    "humidity_abs": "g/m3",
+    "sound": "dB(A)",
+    "pm2_5": "ug/m3",
+    "cnt0_3": "count"
+  },
+  "nonneg_vars": [
+    "co",
+    "co2",
+    "no2",
+    "so2",
+    "o3",
+    "tvoc",
+    "oxygen",
+    "pm1",
+    "pm2_5",
+    "pm10",
+    "TypPS",
+    "cnt0_3",
+    "cnt0_5",
+    "cnt1",
+    "cnt2_5",
+    "cnt5",
+    "cnt10",
+    "humidity",
+    "humidity_abs",
+    "pressure",
+    "sound",
+    "sound_max",
+    "performance"
+  ],
+  "signed_vars": [
+    "temperature",
+    "temperature_o2",
+    "dewpt",
+    "dCO2dt",
+    "dHdt",
+    "health"
+  ],
+  "rate_vars": [
+    "dCO2dt",
+    "dHdt"
+  ],
+  "meta_vars": [
+    "measuretime"
+  ],
+  "state_levels": [
+    "Excellent",
+    "Good",
+    "Moderate",
+    "Poor",
+    "Dangerous"
+  ],
+  "danger_states": [
+    "Dangerous",
+    "Poor"
+  ],
+  "state_spec": {
+    "co": {
+      "kind": "asc",
+      "param": [
+        8.0,
+        15.0,
+        50.0,
+        200.0
+      ]
+    },
+    "co2": {
+      "kind": "asc",
+      "param": [
+        800.0,
+        1000.0,
+        2000.0,
+        5000.0
+      ]
+    },
+    "tvoc": {
+      "kind": "asc",
+      "param": [
+        300.0,
+        500.0,
+        1000.0,
+        3000.0
+      ]
+    },
+    "no2": {
+      "kind": "asc",
+      "param": [
+        40.0,
+        80.0,
+        180.0,
+        280.0
+      ]
+    },
+    "so2": {
+      "kind": "asc",
+      "param": [
+        40.0,
+        80.0,
+        380.0,
+        800.0
+      ]
+    },
+    "o3": {
+      "kind": "asc",
+      "param": [
+        50.0,
+        100.0,
+        168.0,
+        208.0
+      ]
+    },
+    "pm1": {
+      "kind": "asc",
+      "param": [
+        15.0,
+        35.0,
+        55.0,
+        150.0
+      ]
+    },
+    "pm2_5": {
+      "kind": "asc",
+      "param": [
+        30.0,
+        60.0,
+        90.0,
+        120.0
+      ]
+    },
+    "pm10": {
+      "kind": "asc",
+      "param": [
+        50.0,
+        100.0,
+        250.0,
+        350.0
+      ]
+    },
+    "TypPS": {
+      "kind": "asc",
+      "param": [
+        0.3,
+        1.0,
+        2.5,
+        5.0
+      ]
+    },
+    "cnt0_3": {
+      "kind": "asc",
+      "param": [
+        1000.0,
+        10000.0,
+        50000.0,
+        100000.0
+      ]
+    },
+    "cnt0_5": {
+      "kind": "asc",
+      "param": [
+        1000.0,
+        10000.0,
+        50000.0,
+        100000.0
+      ]
+    },
+    "cnt1": {
+      "kind": "asc",
+      "param": [
+        500.0,
+        5000.0,
+        20000.0,
+        50000.0
+      ]
+    },
+    "cnt2_5": {
+      "kind": "asc",
+      "param": [
+        100.0,
+        1000.0,
+        5000.0,
+        10000.0
+      ]
+    },
+    "cnt5": {
+      "kind": "asc",
+      "param": [
+        50.0,
+        500.0,
+        2000.0,
+        5000.0
+      ]
+    },
+    "cnt10": {
+      "kind": "asc",
+      "param": [
+        20.0,
+        200.0,
+        1000.0,
+        3000.0
+      ]
+    },
+    "dewpt": {
+      "kind": "asc",
+      "param": [
+        15.0,
+        18.0,
+        21.0,
+        24.0
+      ]
+    },
+    "sound": {
+      "kind": "asc",
+      "param": [
+        40.0,
+        55.0,
+        70.0,
+        85.0
+      ]
+    },
+    "sound_max": {
+      "kind": "asc",
+      "param": [
+        45.0,
+        60.0,
+        80.0,
+        100.0
+      ]
+    },
+    "temperature": {
+      "kind": "band",
+      "param": {
+        "Excellent": [
+          21,
+          25
+        ],
+        "Good": [
+          20,
+          30
+        ],
+        "Moderate": [
+          15,
+          35
+        ],
+        "Poor": [
+          12,
+          40
+        ]
+      }
+    },
+    "temperature_o2": {
+      "kind": "band",
+      "param": {
+        "Excellent": [
+          21,
+          25
+        ],
+        "Good": [
+          20,
+          30
+        ],
+        "Moderate": [
+          15,
+          35
+        ],
+        "Poor": [
+          12,
+          40
+        ]
+      }
+    },
+    "humidity": {
+      "kind": "band",
+      "param": {
+        "Excellent": [
+          40,
+          50
+        ],
+        "Good": [
+          30,
+          60
+        ],
+        "Moderate": [
+          20,
+          70
+        ],
+        "Poor": [
+          10,
+          80
+        ]
+      }
+    },
+    "humidity_abs": {
+      "kind": "band",
+      "param": {
+        "Excellent": [
+          5,
+          10
+        ],
+        "Good": [
+          3,
+          12
+        ],
+        "Moderate": [
+          2,
+          15
+        ],
+        "Poor": [
+          1,
+          20
+        ]
+      }
+    },
+    "pressure": {
+      "kind": "band",
+      "param": {
+        "Excellent": [
+          1000,
+          1025
+        ],
+        "Good": [
+          980,
+          1040
+        ],
+        "Moderate": [
+          950,
+          1050
+        ],
+        "Poor": [
+          900,
+          1050
+        ]
+      }
+    },
+    "oxygen": {
+      "kind": "band",
+      "param": {
+        "Excellent": [
+          20.5,
+          23
+        ],
+        "Good": [
+          19.5,
+          23.5
+        ],
+        "Moderate": [
+          15,
+          23.5
+        ],
+        "Poor": [
+          10,
+          23.5
+        ]
+      }
+    },
+    "performance": {
+      "kind": "desc",
+      "param": [
+        900.0,
+        700.0,
+        500.0,
+        300.0
+      ]
+    },
+    "health": {
+      "kind": "desc_alarm",
+      "param": [
+        900.0,
+        700.0,
+        500.0,
+        300.0
+      ]
+    },
+    "dCO2dt": {
+      "kind": "asc_q",
+      "param": [
+        5.3,
+        15.4,
+        50.9,
+        125.348
+      ]
+    },
+    "dHdt": {
+      "kind": "asc_q",
+      "param": [
+        0.02,
+        0.08,
+        0.28,
+        0.754
+      ]
+    },
+    "measuretime": {
+      "kind": "meta",
+      "param": null
+    }
+  },
+  "rate_cuts": {
+    "dCO2dt": [
+      5.3,
+      15.4,
+      50.9,
+      125.348
+    ],
+    "dHdt": [
+      0.02,
+      0.08,
+      0.28,
+      0.754
+    ]
+  },
+  "events": [
+    {
+      "name": "power_outage",
+      "location": "laboratory",
+      "ontology_class": "PowerOutage",
+      "start": "2023-04-17 00:00",
+      "end": "2023-04-19 12:00",
+      "detection": "structural",
+      "description": "Lab power outage (probable short circuit) -> appears as a ~44h data gap."
+    },
+    {
+      "name": "fire",
+      "location": "laboratory",
+      "ontology_class": "FireEvent",
+      "start": "2023-05-21 00:00",
+      "end": "2023-05-21 23:59",
+      "detection": "value",
+      "description": "Large fire in Herzogenrath ~9-10 km away -> subtle NO2 rise, weak PM response."
+    },
+    {
+      "name": "dust_humidity",
+      "location": "apartment",
+      "ontology_class": "HumidityMeasurementError",
+      "start": "2023-07-09 00:00",
+      "end": "2023-07-09 23:59",
+      "detection": "value",
+      "description": "Fine-dust measurement error from a sudden humidity increase -> strong PM2.5 artifact."
+    }
+  ],
+  "freq": "2min",
+  "window": {
+    "size": 30,
+    "stride": 15,
+    "max_gap_frac": 0.2
+  },
+  "deployments": {
+    "laboratory": {
+      "rows": 54700,
+      "start": "2023-03-22 17:42:00",
+      "end": "2023-06-06 17:00:00"
+    },
+    "apartment": {
+      "rows": 12506,
+      "start": "2023-06-24 01:58:00",
+      "end": "2023-07-11 10:48:00"
+    }
+  }
+}
